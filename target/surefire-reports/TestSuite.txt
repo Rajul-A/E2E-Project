@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 3, Errors: 0, Skipped: 4, Time elapsed: 9.653 s <<< FAILURE! - in TestSuite
+academy.NavigationBar.invokeBrowser  Time elapsed: 8.172 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at academy.NavigationBar.invokeBrowser(NavigationBar.java:25)
+
+academy.HomePage2.invokeBrowser  Time elapsed: 8.173 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at academy.HomePage2.invokeBrowser(HomePage2.java:21)
+
+academy.HomePage.tearDown  Time elapsed: 0.052 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
+	at academy.HomePage.tearDown(HomePage.java:42)
+

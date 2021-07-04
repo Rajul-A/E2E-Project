@@ -1,0 +1,80 @@
+# Created at 2021-06-20T14:15:42.646
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (8816@DESKTOP-1U1LOV2):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.<init>(XMLAttributesImpl.java:90)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.<init>(XMLAttributesImpl.java:127)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.util.XMLAttributesIteratorImpl.<init>(XMLAttributesIteratorImpl.java:55)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.<init>(XMLDocumentFragmentScannerImpl.java:370)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.<init>(XMLDocumentScannerImpl.java:238)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.<init>(XMLNSDocumentScannerImpl.java:58)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.<init>(XML11Configuration.java:603)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration.<init>(XIncludeAwareParserConfiguration.java:130)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration.<init>(XIncludeAwareParserConfiguration.java:91)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.parsers.SAXParser.<init>(SAXParser.java:111)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.parsers.SAXParser.<init>(SAXParser.java:96)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.<init>(SAXParserImpl.java:403)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.<init>(SAXParserImpl.java:135)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.<init>(SAXParserImpl.java:122)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl.newSAXParserImpl(SAXParserFactoryImpl.java:95)
+        at java.xml@16.0.1/com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl.getFeature(SAXParserFactoryImpl.java:158)
+        at app//org.testng.xml.XMLParser.supportsValidation(XMLParser.java:62)
+        at app//org.testng.xml.XMLParser.<clinit>(XMLParser.java:23)
+        at app//org.testng.xml.Parser.<clinit>(Parser.java:42)
+        at app//org.testng.TestNG.parseSuite(TestNG.java:324)
+        at app//org.testng.TestNG.initializeSuitesAndJarFile(TestNG.java:376)
+        at app//org.testng.TestNG.initializeEverything(TestNG.java:1011)
+        at app//org.testng.TestNG.run(TestNG.java:1023)
+        at app//org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+        at app//org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+        at app//org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@16.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@16.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:243)
+        at java.base@16.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@16.0.1/java.lang.Object.wait(Native Method)
+        at java.base@16.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@16.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@16.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:171)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@16.0.1/java.lang.Object.wait(Native Method)
+        at java.base@16.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@16.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@16.0.1/java.lang.Thread.run(Thread.java:831)
+        at java.base@16.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@16.0.1/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@16.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:649)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$400(ForkedBooter.java:82)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:340)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:423)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:435)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:388)
+        at java.base@16.0.1/java.lang.Thread.run(Thread.java:831)
+
+
+
